@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>().transform;
-        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        int randomSpawnPoint = Random.Range(0, spawnPoints.Length);
-        this.transform.position = spawnPoints[randomSpawnPoint].transform.position;
+        //GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        //int randomSpawnPoint = Random.Range(0, spawnPoints.Length);
+        //this.transform.position = spawnPoints[randomSpawnPoint].transform.position;
     }
 
     // Update is called once per frame

@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     int healthPlayer = INITEIAL_HEALTH;
-
+    [SerializeField]
+    bool isAlive = true;
 
     float horizontalDirection;
     float verticalDirection;
@@ -67,8 +68,15 @@ public class Player : MonoBehaviour
     public void GetDamage(int damage)
     {
         this.healthPlayer -= damage;
+        if(this.healthPlayer <= 0)
+        {
+            Die();
+        }
     }
 
-
+    public void Die()
+    {
+        isAlive = false;
+    }
 
 }
