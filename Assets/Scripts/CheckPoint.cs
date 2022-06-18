@@ -20,7 +20,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManager.instance.spawnRate /= 2;
+            GameManager.instance.spawnRate -= 0.3;
             Destroy(gameObject, 0.2f);
         }
     }
