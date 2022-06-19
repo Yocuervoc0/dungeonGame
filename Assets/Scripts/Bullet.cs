@@ -21,11 +21,23 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy") )
+        if(collision.CompareTag("Enemy"))
         {
             collision.GetComponent<Enemy>().Damage(bulletDamage);
             print("damege");
             Destroy(gameObject);
+        
+        
+
         }
+        if (collision.CompareTag("wall") || collision.CompareTag("box"))
+        {
+            Destroy(gameObject);
+
+
+        }
+            
+
+
     }
 }
