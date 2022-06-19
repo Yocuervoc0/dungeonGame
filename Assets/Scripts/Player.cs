@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     Transform Bullet;
     bool gunLoaded = true;
 
-    float fireRate = 1;
+    float fireRate = 2;
     // Start is called before the first frame update
     void Start()
     {
