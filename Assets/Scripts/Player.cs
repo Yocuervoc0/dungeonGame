@@ -28,13 +28,12 @@ public class Player : MonoBehaviour
     bool gunLoaded = true;
 
     float fireRate = 1;
-    // Start is called before the first frame update
+
     void Start()
     {
        
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontalDirection = Input.GetAxis("Horizontal");
@@ -77,6 +76,14 @@ public class Player : MonoBehaviour
     public void Die()
     {
         isAlive = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PowerUp")){
+            //collision.GetComponent<PowerUP>().powerUpType;
+            Destroy(collision.gameObject);
+        }
     }
 
 }

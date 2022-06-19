@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - wall
   - box
+  - PowerUp
   layers:
   - Default
   - TransparentFX
